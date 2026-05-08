@@ -1,0 +1,248 @@
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.home-hero {
+  background: linear-gradient(160deg, #0D1117 0%, #161B22 55%, #1a1208 100%);
+  position: relative;
+  overflow: hidden;
+}
+.home-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 80% 15%, rgba(192,120,64,0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 55% at 10% 85%, rgba(140,58,46,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.home-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(192,120,64,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192,120,64,0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+}
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+.home-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 600;
+  color: #E8E4DC;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  animation: fadeUp 0.85s ease both;
+}
+.home-subtitle {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 300;
+  color: #8A8880;
+  letter-spacing: 0.05em;
+  animation: fadeUp 0.85s 0.14s ease both;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.home-rule {
+  width: 52px; height: 3px;
+  background: linear-gradient(90deg, #C07840, #8C3A2E);
+  border: none;
+  margin: 1.4rem 0;
+  animation: fadeUp 0.85s 0.07s ease both;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.home-meta {
+  animation: fadeUp 0.85s 0.28s ease both;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* ── Section labels ───────────────────────────────────────────────────────── */
+.section-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C07840;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.section-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.95rem;
+  font-weight: 600;
+  color: #E8E4DC;
+  margin-bottom: 0;
+}
+
+/* ── Navigation cards ─────────────────────────────────────────────────────── */
+.nav-card {
+  background: #161B22;
+  border: 1px solid #2A3344;
+  border-radius: 6px;
+  padding: 1.9rem 1.7rem;
+  display: block;
+  height: 100%;
+  text-decoration: none !important;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  animation: fadeUp 0.85s ease both;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.nav-card:hover {
+  transform: translateY(-5px);
+  border-color: #C07840;
+  box-shadow: 0 14px 44px rgba(192,120,64,0.13);
+}
+.nav-card-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+.nav-card-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.32rem;
+  font-weight: 600;
+  color: #E8E4DC;
+  margin-bottom: 0.45rem;
+}
+.nav-card-body {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 0.98rem;
+  font-weight: 300;
+  color: #8A8880;
+  line-height: 1.58;
+}
+.nav-card-tag {
+  display: inline-block;
+  margin-top: 0.95rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #C07840;
+  border: 1px solid rgba(192,120,64,0.35);
+  border-radius: 3px;
+  padding: 2px 7px;
+}
+
+/* ── Stat chips (hero, right column) ─────────────────────────────────────── */
+.stat-chip {
+  background: #161B22;
+  border: 1px solid #2A3344;
+  border-radius: 5px;
+  padding: 0.65rem 1.2rem;
+  text-align: right;
+  min-width: 165px;
+  animation: fadeUp 0.85s 0.45s ease both;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.stat-chip-val {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #C07840;
+  letter-spacing: 0.04em;
+}
+.stat-chip-lbl {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: #8A8880;
+  letter-spacing: 0.03em;
+}
+
+/* ── Workflow steps ───────────────────────────────────────────────────────── */
+.step-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  color: #C07840;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.step-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #E8E4DC;
+  margin-bottom: 0.4rem;
+}
+.step-body {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #8A8880;
+  line-height: 1.58;
+}
+.col-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  color: #C07840;
+  background: rgba(192,120,64,0.09);
+  border: 1px solid rgba(192,120,64,0.22);
+  border-radius: 3px;
+  padding: 1px 6px;
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+}
+
+/* ── Key-value reference panel ────────────────────────────────────────────── */
+.kv-row {
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid #2A3344;
+  padding-bottom: 0.7rem;
+}
+.kv-key {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #3A3A38;
+}
+.kv-val {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 0.93rem;
+  font-weight: 400;
+  color: #8A8880;
+}
+
+/* ── Nav card image header ────────────────────────────────────────────────── */
+.nav-card-img-wrap {
+  /* Bleeds to card edges, sits above the title */
+  margin: -1.9rem -1.7rem 1.2rem;
+  height: 148px;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.nav-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.52) saturate(1.35);
+  transition: filter 0.3s ease, transform 0.35s ease;
+}
+.nav-card-img-fade {
+  /* Smooth gradient from image into the dark card body */
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 35%,
+    #161B22 100%
+  );
+}
+
+/* Zoom + brighten image on card hover */
+.nav-card:hover .nav-card-img {
+  filter: brightness(0.7) saturate(1.6);
+  transform: scale(1.05);
+}
