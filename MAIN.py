@@ -336,8 +336,8 @@ create_partition_analysis_callbacks(app)
 # create_amphibole_zoning_callbacks(app)
 
 # ─────────────────────────────────────────────────────────────────────────────
+
+server = app.server
+
 if __name__ == "__main__":
     app.run(debug=True, port=8060)
-
-    import os
-print("Assets folder contents:", os.listdir("assisstantfiles"))
