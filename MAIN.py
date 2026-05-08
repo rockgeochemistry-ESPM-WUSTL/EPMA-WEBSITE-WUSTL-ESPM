@@ -23,7 +23,7 @@ app = Dash(
     ],
     suppress_callback_exceptions=True,
 )
-app.title = "Subduction Zone Analysis — EPMA Data Portal"
+app.title = "EPMA Data Portal"
 
 # ─────────────────────────────────────────────────────────────────────────────
 C = {
